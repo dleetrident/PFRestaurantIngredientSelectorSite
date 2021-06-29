@@ -1,0 +1,21 @@
+.ingredient-div{
+  width: auto;
+  margin: auto;
+}
+
+.ingredient {
+display: inline-block;
+  height: 60px;
+  position: relative;
+  margin: 50px 20px 50px 20px;
+}
+
+.ingredient-img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.display-ingredient {
+  height: 200px;
+  width: 200px;
+}
