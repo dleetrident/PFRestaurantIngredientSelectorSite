@@ -4,10 +4,16 @@
 }
 
 .ingredient {
+
 display: inline-block;
   height: 60px;
   position: relative;
   margin: 50px 20px 50px 20px;
+  }
+
+.ingredient-selected {
+    border-radius: 20%;
+  background-color: #73eceb;
 }
 
 .ingredient-img {
