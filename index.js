@@ -1,7 +1,7 @@
+
 const rangeOfIngredients = document.querySelectorAll(".ingredient")
 let meal = []
 let mealkey = []
-
 
 
 function Ingredient(calories,protein,carbs,fat,price){
@@ -51,5 +51,28 @@ totMeal.fat += meal[i].fat;
 totMeal.price += meal[i].price;
 }
 document.querySelector(".meal-total").innerHTML = "Calories:" + totMeal.calories + ", Protein:" + totMeal.protein + ", Carbs:" + totMeal.carbs + ", Fat:" + totMeal.fat + ", Price:" + totMeal.price
-totMeal = {calories: 0,protein: 0,carbs: 0,fat: 0,price:0}
+var ctx = document.getElementById('myChart').getContext('2d');
+var myChart = new Chart(ctx, {
+    type: 'polarArea',
+    data: {
+        labels: ['Protein', 'Carbs', 'Fat'],
+        datasets: [{
+            label: '# of Votes',
+            data: [totMeal.protein,totMeal.carbs,totMeal.fat],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ]
+
+        }]
+    },
+    options: {}
+});
+totMeal = {calories: 0,protein: 0,carbs: 0,fat: 0,price: 0}
 })
+
+//Polar Area chart

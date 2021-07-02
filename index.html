@@ -4,18 +4,22 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="styles.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
-<section class="">
+<section class="selector-section">
   <div class="ingredient-div">
     <div class="ingredient">
       <img src="images/chicken.png" id="chicken" class="ingredient-img" alt="">
+      <div class="ingredient-hover"></div>
   </div>
   <div class="ingredient"  protein="100">
       <img src="images/steak.png" id="steak" class="ingredient-img" alt="">
+      <div class="ingredient-hover"></div>
   </div>
   <div class="ingredient" protein="110">
       <img src="images/lamb.png" id="lamb" class="ingredient-img" alt="">
+      <div class="ingredient-hover"></div>
   </div>
   </div>
   <div class="display-div">
@@ -24,9 +28,19 @@
   <button type="button" class="calculate-meal">Calculate Meal</button>
 <h1 class="meal-total"></h1>
 
+<div class="chart-div">
+    <canvas id="myChart"></canvas>
+</div>
+
+
+
 
 
 </section>
   </body>
-  <script src="index.js" charset="utf-8"></script>
+  <script src="index.js">
+
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
 </html>

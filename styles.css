@@ -1,4 +1,10 @@
+.selector-section{
+  text-align: center;
+}
+
 .ingredient-div{
+  position: relative;
+ text-align: center;
   width: auto;
   margin: auto;
 }
@@ -7,8 +13,28 @@
 
 display: inline-block;
   height: 60px;
+  opacity: 0.6;
   position: relative;
   margin: 50px 20px 50px 20px;
+  } .ingredient:hover {
+    transform: scale(1.2);
+    opacity: 1;
+    animation: box-hover 0.3s
+  }
+  @keyframes box-hover {
+    0% {
+      opacity: 0.4;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+    transform: scale(1.3);
+    }
+    100% {
+      opacity: 1;
+    transform: scale(1.2);
+  }
+
   }
 
 .ingredient-selected {
@@ -24,4 +50,8 @@ display: inline-block;
 .display-ingredient {
   height: 200px;
   width: 200px;
+}
+
+.chart-div{
+  margin: 100px 400px;
 }

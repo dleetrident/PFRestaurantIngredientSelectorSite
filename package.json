@@ -1,0 +1,26 @@
+{
+  "name": "wok-restaurant-app",
+  "version": "1.0.0",
+  "description": "restaurant app where users can select ingredients and have nutritional data displayed before buying",
+  "main": "index.js",
+  "dependencies": {
+    "chart.js": "^3.4.0",
+    "express": "^4.17.1",
+    "requirejs": "^2.3.6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dleetrident/PFRestaurantIngredientSelectorSite.git"
+  },
+  "author": "Daniel Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dleetrident/PFRestaurantIngredientSelectorSite/issues"
+  },
+  "homepage": "https://github.com/dleetrident/PFRestaurantIngredientSelectorSite#readme"
+}
