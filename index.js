@@ -37,22 +37,33 @@ if(ingredients.has(image)){
   display.src = "images/" + image + ".png"
   let obj = ingredients.get(image)
   obj.clicked = !obj.clicked
-  obj.clicked === true ? meal.push(obj) && mealkey.push(image) && div.classList.add("ingredient-selected") : meal.splice(meal.indexOf(obj),1) && mealkey.splice(mealkey.indexOf(image),1) && div.classList.remove("ingredient-selected")
+  if(obj.clicked === true){
+    meal.push(obj);
+    mealkey.push(image);
+    div.classList.add("ingredient-selected");
+    totMeal.calories += obj.calories;
+    totMeal.protein += obj.protein;
+    totMeal.carbs += obj.carbs;
+    totMeal.fat += obj.fat;
+    totMeal.price += obj.price;
+  } else {
+    meal.splice(meal.indexOf(obj),1);
+    mealkey.splice(mealkey.indexOf(image),1);
+    div.classList.remove("ingredient-selected");
+    totMeal.calories -= obj.calories;
+    totMeal.protein -= obj.protein;
+    totMeal.carbs -= obj.carbs;
+    totMeal.fat -= obj.fat;
+    totMeal.price -= obj.price;
+  }
+  document.querySelector(".meal-total").innerHTML = "Calories:" + totMeal.calories + ", Protein:" + totMeal.protein + ", Carbs:" + totMeal.carbs + ", Fat:" + totMeal.fat + ", Price:" + totMeal.price
 }
 }
 
-document.querySelector(".calculate-meal").addEventListener("click",function(e){
-  for(i=0;i<meal.length;i++){
-
-totMeal.calories += meal[i].calories;
-totMeal.protein += meal[i].protein;
-totMeal.carbs += meal[i].carbs;
-totMeal.fat += meal[i].fat;
-totMeal.price += meal[i].price;
-}
-document.querySelector(".meal-total").innerHTML = "Calories:" + totMeal.calories + ", Protein:" + totMeal.protein + ", Carbs:" + totMeal.carbs + ", Fat:" + totMeal.fat + ", Price:" + totMeal.price
-var ctx = document.getElementById('myChart').getContext('2d');
-var myChart = new Chart(ctx, {
+document.querySelector(".show-meal").addEventListener("click",function(e){
+  $(".selector-section").slideUp( "slow", function(){});
+  var ctx = document.getElementById('myChart').getContext('2d');
+  var myChart = new Chart(ctx, {
     type: 'polarArea',
     data: {
         labels: ['Protein', 'Carbs', 'Fat'],
@@ -71,8 +82,6 @@ var myChart = new Chart(ctx, {
         }]
     },
     options: {}
-});
-totMeal = {calories: 0,protein: 0,carbs: 0,fat: 0,price: 0}
-})
+  });
 
-//Polar Area chart
+})

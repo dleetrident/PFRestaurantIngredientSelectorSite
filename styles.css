@@ -2,8 +2,9 @@
   text-align: center;
 }
 
+
 .ingredient-div{
-  position: relative;
+
  text-align: center;
   width: auto;
   margin: auto;
@@ -14,7 +15,6 @@
 display: inline-block;
   height: 60px;
   opacity: 0.6;
-  position: relative;
   margin: 50px 20px 50px 20px;
   } .ingredient:hover {
     transform: scale(1.2);
@@ -50,6 +50,10 @@ display: inline-block;
 .display-ingredient {
   height: 200px;
   width: 200px;
+}
+
+.macro-section{
+  text-align: center;
 }
 
 .chart-div{

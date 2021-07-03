@@ -3,21 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
-<section class="selector-section">
+<section class="selector-section" data-mdb-animation="slide-out-right">
   <div class="ingredient-div">
-    <div class="ingredient">
+    <div class="ingredient col-6 col-md-3 col-sm-1">
       <img src="images/chicken.png" id="chicken" class="ingredient-img" alt="">
       <div class="ingredient-hover"></div>
   </div>
-  <div class="ingredient"  protein="100">
+  <div class="ingredient col-6 col-md-3  col-sm-1">
       <img src="images/steak.png" id="steak" class="ingredient-img" alt="">
       <div class="ingredient-hover"></div>
   </div>
-  <div class="ingredient" protein="110">
+  <div class="ingredient col-6 col-md-3  col-sm-1">
       <img src="images/lamb.png" id="lamb" class="ingredient-img" alt="">
       <div class="ingredient-hover"></div>
   </div>
@@ -25,19 +26,18 @@
   <div class="display-div">
     <img class="display-ingredient" src="" alt="">
   </div>
-  <button type="button" class="calculate-meal">Calculate Meal</button>
+
 <h1 class="meal-total"></h1>
 
+</section>
+<section class="macro-section">
+  <button type="button" class="show-meal btn btn-success">Calculate Meal</button>
 <div class="chart-div">
     <canvas id="myChart"></canvas>
 </div>
-
-
-
-
-
 </section>
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="index.js">
 
   </script>
