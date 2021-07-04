@@ -8,30 +8,123 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
-<section class="selector-section" data-mdb-animation="slide-out-right">
-  <div class="ingredient-div">
-    <div class="ingredient col-6 col-md-3 col-sm-1">
-      <img src="images/chicken.png" id="chicken" class="ingredient-img" alt="">
-      <div class="ingredient-hover"></div>
-  </div>
-  <div class="ingredient col-6 col-md-3  col-sm-1">
-      <img src="images/steak.png" id="steak" class="ingredient-img" alt="">
-      <div class="ingredient-hover"></div>
-  </div>
-  <div class="ingredient col-6 col-md-3  col-sm-1">
-      <img src="images/lamb.png" id="lamb" class="ingredient-img" alt="">
-      <div class="ingredient-hover"></div>
-  </div>
-  </div>
+<section class="selector-section">
+  <div class="ingredient-div container-fluid col-sm-4">
+<h2>Meat</h2>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+        <img src="images/chicken.png" id="chicken" class="ingredient-img rounded" alt="">
+    </div>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+        <img src="images/steak.png" id="steak" class="ingredient-img rounded" alt="">
+    </div>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+        <img src="images/lamb.png" id="lamb" class="ingredient-img rounded" alt="">
+    </div>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+        <img src="images/bacon.png" id="bacon" class="ingredient-img rounded" alt="">
+    </div>
+
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+        <img src="images/ham.png" id="ham" class="ingredient-img rounded" alt="">
+    </div>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+        <img src="images/meatballs.png" id="meatballs" class="ingredient-img rounded" alt="">
+    </div>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+        <img src="images/mince.png" id="mince" class="ingredient-img rounded" alt="">
+    </div>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+        <img src="images/pork-belly.png" id="pork-belly" class="ingredient-img rounded" alt="">
+    </div>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+        <img src="images/sausages.png" id="sausages" class="ingredient-img rounded" alt="">
+    </div>
+    <h2>Vegetables & Co.</h2>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+        <img src="images/baby-corn.png" id="baby-corn" class="ingredient-img rounded" alt="">
+        <div class="ingredient-layer"></div>
+    </div>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+        <img src="images/bell-peppers.png" id="bell-peppers" class="ingredient-img rounded" alt="">
+        <div class="ingredient-layer"></div>
+    </div>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+        <img src="images/broccoli.png" id="broccoli" class="ingredient-img rounded" alt="">
+        <div class="ingredient-layer"></div>
+    </div>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+        <img src="images/carrots.png" id="carrots" class="ingredient-img rounded" alt="">
+        <div class="ingredient-layer"></div>
+    </div>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+        <img src="images/chillis.png" id="chillis" class="ingredient-img rounded" alt="">
+        <div class="ingredient-layer"></div>
+    </div>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+        <img src="images/corn.png" id="corn" class="ingredient-img rounded" alt="">
+        <div class="ingredient-layer"></div>
+    </div>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+        <img src="images/kidney-beans.png" id="kidney-beans" class="ingredient-img rounded" alt="">
+        <div class="ingredient-layer"></div>
+    </div>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+        <img src="images/mushrooms.png" id="mushrooms" class="ingredient-img rounded" alt="">
+        <div class="ingredient-layer"></div>
+    </div>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+        <img src="images/peas.png" id="peas" class="ingredient-img rounded" alt="">
+        <div class="ingredient-layer"></div>
+    </div>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+        <img src="images/spring-beans.png" id="spring-beans" class="ingredient-img rounded" alt="">
+        <div class="ingredient-layer"></div>
+    </div>
+
+    <h2>Extra Toppings</h2>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+        <img src="images/cashews.png" id="cashews" class="ingredient-img rounded" alt="">
+        <div class="ingredient-layer"></div>
+    </div>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+        <img src="images/green-onion.png" id="green-onion" class="ingredient-img rounded" alt="">
+        <div class="ingredient-layer"></div>
+    </div>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+        <img src="images/peanuts.png" id="peanuts" class="ingredient-img rounded" alt="">
+        <div class="ingredient-layer"></div>
+    </div>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+        <img src="images/sesame-seeds.png" id="sesame-seeds" class="ingredient-img rounded" alt="">
+        <div class="ingredient-layer"></div>
+    </div>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+        <img src="images/tofu.png" id="tofu" class="ingredient-img rounded" alt="">
+        <div class="ingredient-layer"></div>
+    </div>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+        <img src="images/fried-tofu.png" id="fried-tofu" class="ingredient-img rounded" alt="">
+        <div class="ingredient-layer"></div>
+    </div>
+</div>
+
+</div class="">
+  <ul class="list-group col-3">
+  <li class="list-group-item">Cras justo odio</li>
+  <li class="list-group-item">Dapibus ac facilisis in</li>
+  <li class="list-group-item">Morbi leo risus</li>
+  <li class="list-group-item">Porta ac consectetur ac</li>
+  <li class="list-group-item">Vestibulum at eros</li>
+</ul>
   <div class="display-div">
     <img class="display-ingredient" src="" alt="">
   </div>
 
 <h1 class="meal-total"></h1>
-
+  <button type="button" class="show-meal btn btn-success">Calculate Meal</button>
 </section>
 <section class="macro-section">
-  <button type="button" class="show-meal btn btn-success">Calculate Meal</button>
+
 <div class="chart-div">
     <canvas id="myChart"></canvas>
 </div>

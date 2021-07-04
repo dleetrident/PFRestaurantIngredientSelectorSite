@@ -14,14 +14,61 @@ let clicked = false
 }
 //[clicked,calories,protein,carbs,fat,price]
 let totMeal = new Ingredient(0,0,0,0,0)
-let chickenObj = new Ingredient(126,27,0,2,0.50)
-let steakObj = new Ingredient(217,26,0,12,2.00)
-let lambObj = new Ingredient(294,25,0,21,1.00)
+let chickenObj = new Ingredient(126,27,0,2,2.00)
+let steakObj = new Ingredient(217,26,0,12,3.50)
+let lambObj = new Ingredient(294,25,0,21,3.00)
+let baconObj = new Ingredient(270,12.6,0,20.1,1.50)
+let burgerObj = new Ingredient(180,24,0,8,2.00)
+let hamObj = new Ingredient(240,26,2,6,2.00)
+let meatballsObj = new Ingredient(228,13.9,8.5,14.8,2.00)
+let minceObj = new Ingredient(177,35.1,0,2.6,2.00)
+let porkbellyObj = new Ingredient(333,18,0,28,3.00)
+let sausagesObj = new Ingredient(268,27,0,18,1.50)
+let babycornObj = new Ingredient(27,1.3,4.2,0.2,0.50)
+let bellpeppersObj = new Ingredient(32,1,7.6,0.2,0.50)
+let broccoliObj = new Ingredient(31,2.6,6,0.3,0.50)
+let carrotsObj = new Ingredient(27,0.6,6.1,0.15,0.50)
+let chillisObj = new Ingredient(18,0.8,4,0.2,0.50)
+let cornObj = new Ingredient(66,2,13.9,0.7,0.50)
+let kidneybeansObj = new Ingredient(55,3.5,10,0.3,0.50)
+let mushroomsObj = new Ingredient(30,3,4.5,0,0.50)
+let peasObj = new Ingredient(90,6,15,0,0.50)
+let springbeansObj = new Ingredient(27,1.6,3.2,0.4,0.50)
+let cashewsObj = new Ingredient(160,5,8,13,1.00)
+let friedtofuObj = new Ingredient(175,11,7,13,1.50)
+let greenonionObj = new Ingredient(10,1,2,0,0)
+let peanutsObj = new Ingredient(161,7.3,4.6,14,1.00)
+let sesameseedsObj = new Ingredient(124,3.8,5.1,10.7,0.50)
+let tofuObj = new Ingredient(90,12,4,4,1.00)
+
 
 const ingredients = new Map()
 .set("lamb",lambObj)
 .set("steak",steakObj)
 .set("chicken",chickenObj)
+.set("bacon",baconObj)
+.set("burger",burgerObj)
+.set("ham",hamObj)
+.set("meatballs",meatballsObj)
+.set("mince",minceObj)
+.set("pork-belly",porkbellyObj)
+.set("sausages",sausagesObj)
+.set("baby-corn",babycornObj)
+.set("bell-peppers",bellpeppersObj)
+.set("broccoli",broccoliObj)
+.set("carrots",carrotsObj)
+.set("chillis",chillisObj)
+.set("corn",cornObj)
+.set("kidney-beans",kidneybeansObj)
+.set("mushrooms",mushroomsObj)
+.set("peas",peasObj)
+.set("spring-beans",springbeansObj)
+.set("fried-tofu",friedtofuObj)
+.set("green-onion",greenonionObj)
+.set("peanuts",peanutsObj)
+.set("sesame-seeds",sesameseedsObj)
+.set("tofu",tofuObj)
+.set("cashews",cashewsObj)
 
 for(i=0;i<rangeOfIngredients.length;i++){
   document.querySelectorAll(".ingredient")[i].addEventListener("click",function(e){
@@ -41,6 +88,7 @@ if(ingredients.has(image)){
     meal.push(obj);
     mealkey.push(image);
     div.classList.add("ingredient-selected");
+
     totMeal.calories += obj.calories;
     totMeal.protein += obj.protein;
     totMeal.carbs += obj.carbs;
