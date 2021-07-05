@@ -8,16 +8,33 @@
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
-<section class="selector-section">
-  <div class="ingredient-div container-fluid col-sm-4">
+<section class="selector-section container-fluid">
+  <div class="display-div rounded img-thumbnail col-sm-4">
+    <img class="display-ingredient" src="" alt="">
+    <div class="card" style="width: 8rem;">
+    <div class="card-body">
+      <h5 class="card-title"></h5>
+      <h6 class="card-subtitle mb-2 text-muted calories-card"></h6>
+      <h6 class="card-subtitle mb-2 text-muted protein-card"></h6>
+      <h6 class="card-subtitle mb-2 text-muted carbs-card"></h6>
+      <h6 class="card-subtitle mb-2 text-muted fat-card"></h6>
+      <h6 class="card-subtitle mb-2 text-muted price-card"></h6>
+    </div>
+  </div>
+
+
+
+
+</div>
+  <div class="ingredient-div container-fluid">
 <h2>Meat</h2>
-    <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+    <div class="ingredient col-lg-1 col-md-3 col-sm-12">
         <img src="images/chicken.png" id="chicken" class="ingredient-img rounded" alt="">
     </div>
-    <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+    <div class="ingredient col-lg-1 col-md-3 col-sm-12">
         <img src="images/steak.png" id="steak" class="ingredient-img rounded" alt="">
     </div>
-    <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+    <div class="ingredient col-lg-1 col-md-3 col-sm-12">
         <img src="images/lamb.png" id="lamb" class="ingredient-img rounded" alt="">
     </div>
     <div class="ingredient col-lg-1 col-md-3 col-sm-4">
@@ -106,28 +123,26 @@
         <img src="images/fried-tofu.png" id="fried-tofu" class="ingredient-img rounded" alt="">
         <div class="ingredient-layer"></div>
     </div>
+      <button type="button" class="show-meal btn btn-success">Calculate Meal</button>
 </div>
 
 </div class="">
-  <ul class="list-group col-3">
-  <li class="list-group-item">Cras justo odio</li>
-  <li class="list-group-item">Dapibus ac facilisis in</li>
-  <li class="list-group-item">Morbi leo risus</li>
-  <li class="list-group-item">Porta ac consectetur ac</li>
-  <li class="list-group-item">Vestibulum at eros</li>
-</ul>
-  <div class="display-div">
-    <img class="display-ingredient" src="" alt="">
-  </div>
+  <ul class="list-group col-4">
+  <li class="list-group-item list-protein"><b>Meal List</b></li>
 
+</ul>
 <h1 class="meal-total"></h1>
-  <button type="button" class="show-meal btn btn-success">Calculate Meal</button>
+
 </section>
 <section class="macro-section">
 
 <div class="chart-div">
     <canvas id="myChart"></canvas>
+<button type="button" class="hide-meal btn btn-warning">Go Back</button>
+<button type="button" class="process-meal btn btn-success">Go To Payment</button>
 </div>
+
+
 </section>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

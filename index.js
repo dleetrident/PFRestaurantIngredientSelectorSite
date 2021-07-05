@@ -2,6 +2,8 @@
 const rangeOfIngredients = document.querySelectorAll(".ingredient")
 let meal = []
 let mealkey = []
+$(".chart-div").hide();
+
 
 
 function Ingredient(calories,protein,carbs,fat,price){
@@ -77,24 +79,50 @@ for(i=0;i<rangeOfIngredients.length;i++){
    })
 }
 
+for(i=0;i<rangeOfIngredients.length;i++){
+  rangeOfIngredients[i].addEventListener("mouseover",function(e){
+    let cardOver = document.querySelector(".card")
+    let displayDiv = document.querySelector(".display-div")
+    let displayImg = document.querySelector(".display-ingredient")
+    let imageOver = e.target.id;
+    let objOver = ingredients.get(imageOver);
+    let left  = displayDiv.clientX + "px";
+    let top  = displayDiv.clientY + "px";
+    displayImg.src = "images/" + imageOver + ".png"
+    cardOver.style.left = left;
+    cardOver.style.top = top;
+    document.querySelector(".calories-card").innerHTML = "Calories: " + objOver.calories
+    document.querySelector(".protein-card").innerHTML = "Protein: " + objOver.protein
+    document.querySelector(".carbs-card").innerHTML = "Carbs: " + objOver.carbs
+    document.querySelector(".fat-card").innerHTML = "Fat: " + objOver.fat
+    document.querySelector(".price-card").innerHTML = "Price: " + objOver.price
+  })
+}
+
+
 function displayImage(image, div){
 let display = document.querySelector(".display-ingredient")
 
 if(ingredients.has(image)){
-  display.src = "images/" + image + ".png"
+
   let obj = ingredients.get(image)
   obj.clicked = !obj.clicked
+  let selectListItem = document.createElement("LI")
+  let listText = document.createTextNode(image)
+  let removeListItem = document.querySelectorAll(".list-group-item")
   if(obj.clicked === true){
     meal.push(obj);
     mealkey.push(image);
     div.classList.add("ingredient-selected");
-
+    selectListItem.appendChild(listText);
+    document.querySelector(".list-group").appendChild(selectListItem).classList.add("list-group-item")
     totMeal.calories += obj.calories;
     totMeal.protein += obj.protein;
     totMeal.carbs += obj.carbs;
     totMeal.fat += obj.fat;
     totMeal.price += obj.price;
   } else {
+     $( "li:contains(" + image + ")" ).remove()
     meal.splice(meal.indexOf(obj),1);
     mealkey.splice(mealkey.indexOf(image),1);
     div.classList.remove("ingredient-selected");
@@ -109,27 +137,36 @@ if(ingredients.has(image)){
 }
 
 document.querySelector(".show-meal").addEventListener("click",function(e){
-  $(".selector-section").slideUp( "slow", function(){});
-  var ctx = document.getElementById('myChart').getContext('2d');
-  var myChart = new Chart(ctx, {
-    type: 'polarArea',
-    data: {
-        labels: ['Protein', 'Carbs', 'Fat'],
-        datasets: [{
-            label: '# of Votes',
-            data: [totMeal.protein,totMeal.carbs,totMeal.fat],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ]
+    $(".ingredient-div").slideUp( "slow", function(){});
+    $(".display-div").slideUp( "slow", function(){});
+    $(".chart-div").slideDown( "slow", function(){});
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'polarArea',
+      data: {
+          labels: ['Protein', 'Carbs', 'Fat'],
+          datasets: [{
+              label: '# of Votes',
+              data: [totMeal.protein,totMeal.carbs,totMeal.fat],
+              backgroundColor: [
+                  'rgba(255, 99, 132, 0.2)',
+                  'rgba(54, 162, 235, 0.2)',
+                  'rgba(255, 206, 86, 0.2)',
+                  'rgba(75, 192, 192, 0.2)',
+                  'rgba(153, 102, 255, 0.2)',
+                  'rgba(255, 159, 64, 0.2)'
+              ]
 
-        }]
-    },
-    options: {}
-  });
-
+          }]
+      },
+      options: {}
+    })
 })
+
+
+document.querySelector(".hide-meal").addEventListener("click",function(e){
+      $(".ingredient-div").slideDown( "slow", function(){});
+      $(".display-div").slideDown( "slow", function(){});
+      $(".chart-div").hide();
+
+    })

@@ -10,8 +10,7 @@ h2{
 
 
 .ingredient-div{
-  display: inline-block;
-  text-align: lef;
+
 width: 50%;
 margin-bottom: 5%;
 padding: 20px;
@@ -61,13 +60,30 @@ display: inline-block;
 
 .list-group{
   display: inline-block;
+left: 80%;
   position: fixed;
+  top: 14%;
+  width: 18%;
+}
+
+.display-div {
+  align-items: center;
+position: fixed;
+  height: 200px;
+  width: 200px;
+  left: 5%;
+  margin-right: 20px;
   top: 14%;
 }
 
 .display-ingredient {
-  height: 200px;
-  width: 200px;
+  height: 100%;
+  width: 100%;
+}
+
+.card{
+
+margin: 10px auto;
 }
 
 .macro-section{
