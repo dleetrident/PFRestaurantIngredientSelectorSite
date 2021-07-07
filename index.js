@@ -3,6 +3,8 @@ const rangeOfIngredients = document.querySelectorAll(".ingredient")
 let meal = []
 let mealkey = []
 $(".chart-div").hide();
+let displayDiv = document.querySelector(".display-div")
+let displayImg = document.querySelector(".display-ingredient")
 
 
 
@@ -82,8 +84,6 @@ for(i=0;i<rangeOfIngredients.length;i++){
 for(i=0;i<rangeOfIngredients.length;i++){
   rangeOfIngredients[i].addEventListener("mouseover",function(e){
     let cardOver = document.querySelector(".card")
-    let displayDiv = document.querySelector(".display-div")
-    let displayImg = document.querySelector(".display-ingredient")
     let imageOver = e.target.id;
     let objOver = ingredients.get(imageOver);
     let left  = displayDiv.clientX + "px";
@@ -91,6 +91,7 @@ for(i=0;i<rangeOfIngredients.length;i++){
     displayImg.src = "images/" + imageOver + ".png"
     cardOver.style.left = left;
     cardOver.style.top = top;
+    document.querySelector(".card-title").innerHTML = imageOver
     document.querySelector(".calories-card").innerHTML = "Calories: " + objOver.calories
     document.querySelector(".protein-card").innerHTML = "Protein: " + objOver.protein
     document.querySelector(".carbs-card").innerHTML = "Carbs: " + objOver.carbs
@@ -137,9 +138,18 @@ if(ingredients.has(image)){
 }
 
 document.querySelector(".show-meal").addEventListener("click",function(e){
-    $(".ingredient-div").slideUp( "slow", function(){});
-    $(".display-div").slideUp( "slow", function(){});
-    $(".chart-div").slideDown( "slow", function(){});
+    $(".ingredient-div").slideUp(1000);
+
+    $(".chart-div").fadeIn(1000);
+
+      displayImg.src = "images/wok.png"
+
+    document.querySelector(".card-title").innerHTML = "Meal Total"
+    document.querySelector(".calories-card").innerHTML = "Calories: " + totMeal.calories
+    document.querySelector(".protein-card").innerHTML = "Protein: " + totMeal.protein
+    document.querySelector(".carbs-card").innerHTML = "Carbs: " + totMeal.carbs
+    document.querySelector(".fat-card").innerHTML = "Fat: " + totMeal.fat
+    document.querySelector(".price-card").innerHTML = "Price: " + totMeal.price
     var ctx = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx, {
       type: 'polarArea',
@@ -162,11 +172,34 @@ document.querySelector(".show-meal").addEventListener("click",function(e){
       options: {}
     })
 })
-
-
 document.querySelector(".hide-meal").addEventListener("click",function(e){
-      $(".ingredient-div").slideDown( "slow", function(){});
-      $(".display-div").slideDown( "slow", function(){});
-      $(".chart-div").hide();
+    $(".ingredient-div").delay(1000).slideDown(1000);
 
+    $(".chart-div").fadeOut(1000);
     })
+
+
+document.onload = $(".load-screen").fadeIn(1500)
+document.onload = $(".navbar-nav").fadeIn(1500)
+document.onload.removeClass("hide-div")
+
+$(".load-button").click(function load(){
+  $(".load-screen").slideUp(600)
+  $('.selector-section').removeClass("hide-div")
+  $('.selector-section').hide()
+  $('.selector-section').fadeIn(1500)
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 40) {
+      $('.display-div').fadeIn(1500)
+      $('.list-group').fadeIn(1500)
+      $('.display-div').removeClass("hide-div")
+      $('.list-group').removeClass("hide-div")
+      $('.chart-div').removeClass("hide-div")
+
+    } else{
+      $('.display-div').fadeOut()
+      $('.list-group').fadeOut()
+    }
+  });
+})
