@@ -179,15 +179,11 @@ document.querySelector(".hide-meal").addEventListener("click",function(e){
     })
 
 
-document.onload = $(".load-screen").fadeIn(1500)
+document.onload = $('.selector-section').fadeIn(1500)
 document.onload = $(".navbar-nav").fadeIn(1500)
 document.onload.removeClass("hide-div")
 
-$(".load-button").click(function load(){
-  $(".load-screen").slideUp(600)
-  $('.selector-section').removeClass("hide-div")
-  $('.selector-section').hide()
-  $('.selector-section').fadeIn(1500)
+
 
   $(window).scroll(function() {
     if ($(this).scrollTop() > 40) {
@@ -202,4 +198,3 @@ $(".load-button").click(function load(){
       $('.list-group').fadeOut()
     }
   });
-})
