@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include ("partials/head"); -%>
+  </head>
+    <body class="bg-light">
+      <header>
+      <%- include('partials/header'); -%>
+      </header>
+
+<section class="selector-section container-fluid hide-div">
+
+
+    <!-- Display Div -->
+  <div class="display-div hide-div rounded img-thumbnail col-sm-4 end-10">
+    <img class="display-ingredient" src="" alt="">
+    <div class="card" style="width: 8rem;">
+    <div class="card-body">
+      <h6 class="card-title"></h5>
+      <h6 class="card-subtitle mb-2 text-muted calories-card"></h6>
+      <h6 class="card-subtitle mb-2 text-muted protein-card"></h6>
+      <h6 class="card-subtitle mb-2 text-muted carbs-card"></h6>
+      <h6 class="card-subtitle mb-2 text-muted fat-card"></h6>
+      <h6 class="card-subtitle mb-2 text-muted price-card"></h6>
+    </div>
+  </div>
+</div>
+
+<div class="ingredient-div container-fluid">
+  <div class="size-div bottom">
+    <h2>Meal Size</h2>
+    <hr>
+    <div class="ingredient size-button col-lg-1 col-md-3 col-sm-4">
+      <button type="button" name="button" class="btn" id="small">S (from £3.00)</button>
+    </div>
+    <div class="ingredient size-button col-lg-1 col-md-3 col-sm-4">
+      <button type="button" name="button" class="btn" id="medium">M (from £4.50)</button>
+    </div>
+    <div class="ingredient size-button col-lg-1 col-md-3 col-sm-4">
+      <button type="button" name="button" class="btn" id="large">L (from £6.00)</button>
+    </div>
+    <br>
+  </div>
+  <div class="carb-div bottom">
+    <h4>Start by choosing your base of rice or noodles..</h4>
+    <hr>
+    <br>
+    <h2>Carbs</h2>
+    <hr>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4 carb">
+      <button type="button" name="button" class="btn" id="egg-noodles">Egg Noodles</button>
+    </div>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4 carb">
+      <button type="button" name="button" class="btn" id="vermicelli">Vermicelli</button>
+    </div>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4 carb">
+      <button type="button" name="button" class="btn" id="glass-noodles">Glass Noodles</button>
+    </div>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4 carb">
+      <button type="button" name="button" class="btn" id="brown-rice">Brown Rice</button>
+    </div>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4 carb">
+      <button type="button" name="button" class="btn" id="white-rice">White Rice</button>
+  </div>
+  <br>
+  </div>
+  <!-- sauce -->
+  <div class="sauce-div bottom">
+    <h4>What will be your chosen style of sauce..?</h4>
+    <hr>
+    <br>
+    <h2>Sauce</h2>
+    <hr>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4 sauce">
+      <button type="button" name="button" class="btn" id="traditional">Normal</button>
+    </div>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4 sauce">
+      <button type="button" name="button" class="btn" id="peanut-sauce">Peanut (£1.00)</button>
+    </div>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4 sauce">
+      <button type="button" name="button" class="btn" id="spicy-sauce">Spicy (£1.00)</button>
+    </div>
+    <div class="ingredient col-lg-1 col-md-3 col-sm-4 sauce">
+      <button type="button" name="button" class="btn" id="curry-sauce">Curry (£1.00)</button>
+    </div>
+    <br>
+    <button type="button" onClick="window.location.href=window.location.href" class="start-over btn btn-warning">Go Back</button>
+  </div>
+  <div class="meat-div bottom">
+    <h4>There are plenty of meat options to choose from..</h4>
+    <hr>
+    <br>
+    <h2>Meat</h2>
+    <hr>
+        <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+            <img src="images/chicken.png" id="chicken" class="ingredient-img rounded" alt="">
+        </div>
+        <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+            <img src="images/steak.png" id="steak" class="ingredient-img rounded" alt="">
+        </div>
+        <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+            <img src="images/lamb.png" id="lamb" class="ingredient-img rounded" alt="">
+        </div>
+        <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+            <img src="images/bacon.png" id="bacon" class="ingredient-img rounded" alt="">
+        </div>
+        <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+            <img src="images/ham.png" id="ham" class="ingredient-img rounded" alt="">
+        </div>
+        <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+            <img src="images/meatballs.png" id="meatballs" class="ingredient-img rounded" alt="">
+        </div>
+        <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+            <img src="images/mince.png" id="mince" class="ingredient-img rounded" alt="">
+        </div>
+        <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+            <img src="images/pork-belly.png" id="pork-belly" class="ingredient-img rounded" alt="">
+        </div>
+        <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+            <img src="images/sausages.png" id="sausages" class="ingredient-img rounded" alt="">
+        </div>
+  </div>
+<div class="filling-div">
+  <h4>..and now choose from 5 healthy ingredients..!</h4>
+  <hr>
+  <br>
+      <h2>Vegetables & Co.</h2>
+      <hr>
+      <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+          <img src="images/baby-corn.png" id="baby-corn" class="ingredient-img rounded" alt="">
+          <div class="ingredient-layer"></div>
+      </div>
+      <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+          <img src="images/bell-peppers.png" id="bell-peppers" class="ingredient-img rounded" alt="">
+          <div class="ingredient-layer"></div>
+      </div>
+      <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+          <img src="images/broccoli.png" id="broccoli" class="ingredient-img rounded" alt="">
+          <div class="ingredient-layer"></div>
+      </div>
+      <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+          <img src="images/carrots.png" id="carrots" class="ingredient-img rounded" alt="">
+          <div class="ingredient-layer"></div>
+      </div>
+      <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+          <img src="images/chillis.png" id="chillis" class="ingredient-img rounded" alt="">
+          <div class="ingredient-layer"></div>
+      </div>
+      <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+          <img src="images/corn.png" id="corn" class="ingredient-img rounded" alt="">
+          <div class="ingredient-layer"></div>
+      </div>
+      <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+          <img src="images/kidney-beans.png" id="kidney-beans" class="ingredient-img rounded" alt="">
+          <div class="ingredient-layer"></div>
+      </div>
+      <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+          <img src="images/mushrooms.png" id="mushrooms" class="ingredient-img rounded" alt="">
+          <div class="ingredient-layer"></div>
+      </div>
+      <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+          <img src="images/peas.png" id="peas" class="ingredient-img rounded" alt="">
+          <div class="ingredient-layer"></div>
+      </div>
+      <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+          <img src="images/spring-beans.png" id="spring-beans" class="ingredient-img rounded" alt="">
+          <div class="ingredient-layer"></div>
+      </div>
+      <h2>Extra Toppings</h2>
+      <hr>
+      <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+          <img src="images/cashews.png" id="cashews" class="ingredient-img rounded" alt="">
+          <div class="ingredient-layer"></div>
+      </div>
+      <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+          <img src="images/green-onion.png" id="green-onion" class="ingredient-img rounded" alt="">
+          <div class="ingredient-layer"></div>
+      </div>
+      <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+          <img src="images/peanuts.png" id="peanuts" class="ingredient-img rounded" alt="">
+          <div class="ingredient-layer"></div>
+      </div>
+      <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+          <img src="images/sesame-seeds.png" id="sesame-seeds" class="ingredient-img rounded" alt="">
+          <div class="ingredient-layer"></div>
+      </div>
+      <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+          <img src="images/tofu.png" id="tofu" class="ingredient-img rounded" alt="">
+          <div class="ingredient-layer"></div>
+      </div>
+      <div class="ingredient col-lg-1 col-md-3 col-sm-4">
+          <img src="images/fried-tofu.png" id="fried-tofu" class="ingredient-img rounded" alt="">
+          <div class="ingredient-layer"></div>
+      </div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h3 class="meal-cap"></h3>
+      <hr>
+      <div class="button-div">
+        <button type="button" onClick="window.location.href=window.location.href" class="start-over btn btn-danger">Start Over</button>
+          <button type="button" class="show-meal meal-cap btn btn-success">Calculate Meal</button>
+      </div>
+</div>
+
+</div>
+
+</div class="">
+  <ul class="list-group hide-div col-4">
+  <li class="list-group-item list-protein"><b>Meal List</b></li>
+
+</ul>
+
+
+</section>
+<section class="macro-section">
+
+<div class="chart-div hide-div">
+    <canvas id="myChart"></canvas>
+    <br>
+    <br>
+    <h3 class="final-price"></h3>
+    <hr>
+    <div class="button-div">
+  <button type="button" onClick="window.location.href=window.location.href" class="start-over btn btn-danger">Start Over</button>
+<button type="button" class="btn btn-warning">Add and Continue (tba)</button>
+<form class="" action="/order" method="post">
+<button type="submit" class="process-meal btn btn-success">To Payment</button>
+</form>
+</div>
+</div>
+
+</div>
+
+
+
+</section>
+<footer>
+<%- include('partials/footer') -%>
+<script src="index.js" charset="utf-8"></script>
+</footer>

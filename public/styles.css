@@ -3,12 +3,23 @@ font-family: 'Didact Gothic', sans-serif;
 }
 h2{
   margin-top:20px;
-
-
+}
+hr{
+  margin: 5px;
+}
+button{
+  position: relative;
+}
+form{
+  display: inline-block;
 }
 hr{
   width: 20%;
   margin: auto;
+}
+
+.bottom{
+  margin-bottom: 300px;
 }
 
 .start-over{
@@ -78,7 +89,8 @@ display: inline-block;
 }
 
 .button-div{
-  margin-top: 100px;
+  margin-top: 50px;
+  display: inline-block;
 }
 
 .ingredient-img {

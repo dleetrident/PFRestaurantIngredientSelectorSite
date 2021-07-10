@@ -1,4 +1,3 @@
-
 const rangeOfIngredients = document.querySelectorAll(".ingredient")
 const rangeOfSizes = document.querySelectorAll(".size-button")
 let meal = []
@@ -220,6 +219,7 @@ if(ingredients.has(image)){
       document.querySelector(".carbs-card").innerHTML = "Carbs: " + Math.round(totMeal.carbs)
       document.querySelector(".fat-card").innerHTML = "Fat: " + Math.round(totMeal.fat)
       document.querySelector(".price-card").innerHTML = "Price: £" + totMeal.price.toFixed(2)
+      document.querySelector(".final-price").innerHTML = "Meal Price: £" + totMeal.price.toFixed(2)
       var ctx = document.getElementById('myChart').getContext('2d');
       var myChart = new Chart(ctx, {
         type: 'polarArea',
@@ -249,5 +249,3 @@ if(ingredients.has(image)){
 
 
 document.onload = $('.selector-section').fadeIn(1500)
-document.onload = $(".navbar-nav").fadeIn(1500)
-document.onload.removeClass("hide-div")

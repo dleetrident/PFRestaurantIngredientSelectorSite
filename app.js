@@ -10,28 +10,27 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.use(express.static(__dirname + '/public'));
+app.set("view engine","ejs")
 
-app.get("/home", function(req,res){
-res.sendFile(__dirname + "/home.html")
+app.get("/", function(req,res){
+res.render("home", { });
 });
 app.get("/about", function(req,res){
-res.sendFile(__dirname + "/about.html")
+res.render("about", { });
 });
-app.get("/blog", function(req,res){
-res.sendFile(__dirname + "/blog.html")
+app.get("/order", function(req,res){
+res.render("order", { });
 });
 app.get("/contact", function(req,res){
-res.sendFile(__dirname + "/contact.html")
+res.render("contact", { });
 });
 app.get("/payment", function(req,res){
-res.sendFile(__dirname + "/payment.html")
+res.render("payment", { });
 });
-app.get("/",function(req,res){
-  res.sendFile(__dirname + "/index.html")
-})
 
 
-app.post("/",function(req,res){
+
+app.post("/order",function(req,res){
   res.redirect("/payment")
 })
 
