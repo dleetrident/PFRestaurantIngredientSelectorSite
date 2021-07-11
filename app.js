@@ -30,9 +30,18 @@ res.render("payment", { });
 
 
 
-app.post("/order",function(req,res){
+app.post("/payment",function(req,res){
   res.redirect("/payment")
 })
+
+app.post("/order",function(req,res){
+  res.redirect("/order")
+})
+
+app.post("/about",function(req,res){
+  res.redirect("/about")
+})
+
 
 
 app.listen(3000,function(){

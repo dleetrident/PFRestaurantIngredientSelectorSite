@@ -149,3 +149,78 @@ margin: 10px auto;
 .chart-div{
   margin: 100px 400px;
 }
+
+/* landing */
+.experiences-section {
+  height: 2000px;
+  animation: fadeIn 3s;
+}
+
+.white-container {
+  width: 100%;
+  box-shadow: 5px 10px 30px #1f6f8b;
+}
+
+.container {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.profile {
+  margin: 0 auto 100px;
+  width: 50%
+}
+
+.our-story {
+  background-color: #01aac1;
+  color: white;
+  height: 350px;
+  padding-top: 130px;
+}
+
+.our-story-div {
+  text-align: center;
+}
+
+.skill-row {
+  margin: 60px auto;
+  line-height: 2
+}
+
+.left {
+    text-align: left;
+}
+
+.center {
+  text-align: center;
+}
+
+.right {
+  text-align: right;
+}
+
+.img-left {
+  width: 450px;
+object-fit: cover;
+  float: left;
+margin-right: 30px;
+}
+
+.img-right {
+  width: 450px;
+object-fit: cover;
+  float: right;
+margin-left: 30px;
+}
+
+.landing-text {
+
+}
+
+.about-us {
+  width: 60%;
+  text-align: center;
+  margin: 50px auto;
+}

@@ -7,16 +7,35 @@
       <header>
       <%- include('partials/header'); -%>
       </header>
+      <section class="our-story" id="our-story">
+        <div class="our-story-div">
+            <h3>Our Story</h3>
+            <hr>
+            <p>We're passionate about making healthy eating cheap, easy and convenient for modern lives</p>
+        </div>
+        </section>
+      <section class="white-container container-fluid row mx-auto" id="our-story">
+        <div class="container skill-row left">
+              <img class="img-right" src="../images/Capture.PNG" alt="university">
+              <br>
+              <p class="landing-text"><b>Add simple to daily life.</b></p>
+              <p>We make eating healthy easy and delicious. We lay bare the nutritional data of all the ingredients that go into your meal- so you will always be in control.</p>
+              <form class="" action="/order" method="post">
+              <button type="submit" class="btn btn-primary" id="order">Assemble Meal</button>
+              </form>
 
+            </div>
+          <div class="skill-row right container">
+              <img class="img-left" src="../images/wok-toss.jpg" alt="school" />
+              <br>
+              <p class="landing-text"><b>Delicious fresh ingredients made to order.</b></p>
+              <p>Having a cheat meal will never be stressful again! Our ingredients are all freshly sourced, tossed together in health-conscious sesame oil with our tangy garlic, savoury onion and custom stock- just choose from our deliciously crafted sauces and add your desired ingredients.</p>
+              <form class="" action="/about" method="post">
+              <button type="submit" class="btn btn-primary" id="about">More About Us</button>
+              </form>
+        </div>
 
-<section class="selector-section container-fluid hide-div">
-  <h1>
-    Landing
-  </h1>
-  <p>
-    My page
-  </p>
-</section>
+      </section>
 </body>
 <footer>
 <%- include('partials/footer') -%>
